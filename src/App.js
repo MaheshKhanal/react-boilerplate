@@ -1,13 +1,14 @@
-import "./App.css";
+import { Button, Grid } from "@mui/material";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Voting portal</h1>
-      </header>
-    </div>
+    <Grid container>
+      <Button>hello</Button>
+      <Button>hello</Button>
+      <Button>hello</Button>
+      <Button>hello</Button>
+    </Grid>
   );
-}
+};
 
 export default App;
