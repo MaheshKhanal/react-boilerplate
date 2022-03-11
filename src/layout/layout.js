@@ -4,13 +4,13 @@ import { themeState } from "./themeAtom";
 import { useRecoilValue } from "recoil";
 import { ThemeProvider } from "@mui/material/styles";
 import { darkTheme, lightTheme } from "./theme";
-import Switch from "../components/theme-switch";
+import Switch from "../components/utils/theme-switch";
 
 const Layout = ({ children }) => {
   const currentTheme = useRecoilValue(themeState);
   return (
     <ThemeProvider theme={currentTheme === "dark" ? darkTheme : lightTheme}>
-      <Paper style={{ height: "100vh", borderRadius: "0px" }}>
+      <Paper style={{ height: "100vh" }} square>
         <Grid container spacing={0}>
           <Grid container justifyContent={"flex-end"}>
             <Switch></Switch>

@@ -1,15 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import App from "./pages/Main/App";
 import "./index.css";
 import { RecoilRoot } from "recoil";
 import Layout from "./layout/layout";
+import Test from "./pages/Page2/test-app";
 
 ReactDOM.render(
   <React.StrictMode>
     <RecoilRoot>
       <Layout>
-        <App />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<App />} exact></Route>
+            <Route path="/page2" element={<Test />} exact></Route>
+          </Routes>
+        </BrowserRouter>
       </Layout>
     </RecoilRoot>
   </React.StrictMode>,

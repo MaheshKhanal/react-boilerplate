@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { styled } from "@mui/system";
 import { useSwitch } from "@mui/base/SwitchUnstyled";
 import { useRecoilState } from "recoil";
-import { themeState } from "../layout/themeAtom";
+import { themeState } from "../../layout/themeAtom";
 
 const blue = {
   700: "#0059B2",
